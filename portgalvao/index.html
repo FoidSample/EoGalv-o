@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-tone="sangue" data-motion="cinema">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EoGalvão — Game producer &amp; game designer</title>
+<meta name="description" content="EoGalvão (Violenszz) — game producer and game designer on Roblox. From zero to play." />
+<link rel="icon" href="assets/logo-eg.png" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Public+Sans:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- barra de progresso de leitura -->
+<div class="progress" id="progress"></div>
+
+<header class="header">
+  <a class="brand" href="#topo" id="brand">
+    <span class="brand__tile" id="brandTile">
+      <img src="assets/logo-eg.png" alt="EoGalvão" />
+    </span>
+    <span class="brand__name">EoGalvão</span>
+  </a>
+
+  <nav class="nav">
+    <a href="#projetos" data-i18n="navProjects">Projects</a>
+    <a href="#metodo" data-i18n="navMethod">How I work</a>
+    <a href="#contato" data-i18n="navContact">Contact</a>
+  </nav>
+
+  <div class="lang">
+    <span class="lang__pill" id="langPill"></span>
+    <button type="button" data-lang="pt">PT</button>
+    <button type="button" data-lang="en">EN</button>
+  </div>
+
+  <span class="seal" aria-hidden="true">
+    <svg viewBox="0 0 60 60">
+      <path id="sealArc" d="M30 30 m -22 0 a 22 22 0 1 0 44 0 a 22 22 0 1 0 -44 0" fill="none"></path>
+      <text><textPath href="#sealArc">EOGALVAO · VIOLENSZZ · </textPath></text>
+    </svg>
+    <span class="seal__dot"></span>
+  </span>
+
+  <button type="button" class="theme-btn" id="themeBtn">
+    <span class="theme-btn__icon" id="themeIcon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+      </svg>
+    </span>
+    <span data-i18n="themeLabel">Dark mode</span>
+  </button>
+</header>
+
+<main id="topo">
+
+  <!-- ============================= CAPA ============================= -->
+  <section class="hero">
+    <div class="hero__texture" id="heroTexture" aria-hidden="true"></div>
+    <div class="hero__wash" aria-hidden="true"></div>
+    <div class="hero__decor" id="heroDecor" aria-hidden="true"></div>
+    <div class="hero__embers" id="heroEmbers" aria-hidden="true"></div>
+    <div class="hero__glow" id="heroGlow" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <p class="hero__role" data-rev data-i18n="heroRole">Game producer and game designer on Roblox</p>
+        <h1 class="hero__title" id="heroTitle"></h1>
+        <div class="hero__rule" id="heroRule"></div>
+        <p class="hero__lead" data-rev data-i18n="heroLead"></p>
+
+        <p class="terminal" data-rev>
+          <span class="terminal__prompt">&gt;</span>
+          <span id="terminalText"></span>
+          <span class="terminal__cursor"></span>
+        </p>
+
+        <div class="hero__cta" data-rev>
+          <a class="btn btn--solid sweep" href="#projetos"><span data-i18n="ctaProjects">See the projects</span><span class="sweep__shine"></span></a>
+          <a class="btn btn--ghost" href="#contato" data-i18n="ctaContact">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero__tower">
+        <svg class="tower" id="tower" viewBox="0 0 260 250"></svg>
+        <p class="tower__hint" id="towerHint"></p>
+        <img class="gif gif--ducks" src="assets/patos.gif" alt="" aria-hidden="true" />
+        <img class="gif gif--cat-hero" src="assets/mascote.gif" alt="" aria-hidden="true" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ FAIXA ============================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" id="marqueeTrack"></div>
+  </div>
+
+  <!-- ============================ SOBRE ============================= -->
+  <section class="section about" id="sobre">
+    <div class="about__grid">
+      <div class="about__portrait" data-rev>
+        <div class="frame frame--portrait">
+          <span class="holder" id="portraitHolder"></span>
+        </div>
+        <img class="gif gif--cat-portrait" src="assets/mascote.gif" alt="" aria-hidden="true" />
+      </div>
+
+      <div class="about__text">
+        <div data-rev>
+          <p class="kicker"><span class="kicker__dash"></span><span data-i18n="bioKicker">Who is behind it</span></p>
+          <h2 class="h2" data-i18n="bioTitle">About me</h2>
+          <span class="h2__rule" data-rule></span>
+        </div>
+
+        <p class="prose" data-rev data-i18n="bio1"></p>
+        <p class="prose" data-rev data-i18n="bio2"></p>
+        <p class="prose" data-rev data-i18n="bio3"></p>
+
+        <dl class="facts" id="facts" data-rev></dl>
+
+        <div class="chips" data-rev>
+          <span class="chips__label" data-i18n="networkLabel">Network</span>
+          <span class="chips__list" id="network"></span>
+        </div>
+
+        <div class="chips" data-rev>
+          <span class="chips__label" data-i18n="toolsLabel">Tools I use</span>
+          <span class="chips__list" id="tools"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== PROJETOS =========================== -->
+  <section class="section projects" id="projetos">
+    <div class="projects__head">
+      <div data-rev>
+        <h2 class="h2" data-i18n="projectsTitle">Projects</h2>
+        <span class="h2__rule" data-rule></span>
+      </div>
+      <div class="projects__nav" data-rev>
+        <span class="projects__counter" id="archiveCounter"></span>
+        <div class="projects__arrows">
+          <button type="button" id="prevGame" aria-label="Previous project">&#8592;</button>
+          <button type="button" id="nextGame" aria-label="Next project">&#8594;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects__body">
+      <!-- painel escuro de números -->
+      <aside class="panel" data-rev>
+        <div class="panel__top">
+          <span class="panel__logo"><img src="assets/logo-eg.png" alt="EoGalvão" /></span>
+          <img class="gif" src="assets/mascote.gif" alt="" aria-hidden="true" style="width:52px" />
+          <img class="gif" src="assets/patos.gif" alt="" aria-hidden="true" style="width:82px" />
+        </div>
+
+        <div class="stats">
+          <div class="stat stat--live">
+            <p class="stat__label">
+              <span class="pulse" id="livePulse"><span></span></span>
+              <span data-i18n="statPlaying">Playing now</span>
+            </p>
+            <span class="stat__value" id="statPlaying">—</span>
+          </div>
+          <div class="stat">
+            <p class="stat__label" data-i18n="statVisits">Total visits</p>
+            <span class="stat__value stat__value--soft" id="statVisits">—</span>
+          </div>
+          <div class="stat">
+            <p class="stat__label" data-i18n="statShipped">Games released</p>
+            <span class="stat__value" data-count="2">2</span>
+          </div>
+          <div class="stat">
+            <p class="stat__label" data-i18n="statDev">In production</p>
+            <span class="stat__value" data-count="1">1</span>
+          </div>
+        </div>
+
+        <div class="panel__sticker">
+          <span class="sticker">
+            <img src="assets/sticker-panel.webp" alt="EoGalvão" />
+          </span>
+          <span class="sticker__note" data-i18n="footerSlogan">From zero to play.</span>
+        </div>
+
+        <p class="panel__status">
+          <span id="statusText"></span>
+          <button type="button" id="refreshBtn" data-i18n="refresh">Refresh</button>
+        </p>
+      </aside>
+
+      <!-- cartão do jogo -->
+      <div class="archive">
+        <div class="card" data-rev>
+          <div class="card__bar">
+            <span class="dots"><span></span><span></span><span></span></span>
+            <span class="card__barlabel" id="windowLabel"></span>
+          </div>
+
+          <div class="card__stage">
+            <div class="card__art">
+              <span class="holder" id="artHolder"></span>
+              <span class="corner corner--tl"></span>
+              <span class="corner corner--tr"></span>
+              <div class="card__fade"></div>
+              <a class="play sweep" id="playLink" target="_blank" rel="noopener">
+                <span id="playLabel"></span>
+                <span class="play__icon">&#9654;</span>
+                <span class="sweep__shine"></span>
+              </a>
+            </div>
+
+            <div class="badge badge--dev" id="devBadge" hidden="hidden">
+              <span class="badge__dot"></span><span id="devLabel"></span>
+            </div>
+
+            <div class="card__body">
+              <p class="card__eyebrow" id="gameEyebrow"></p>
+              <div class="card__title">
+                <span class="card__icon">
+                  <span class="holder" id="iconHolder"></span>
+                </span>
+                <h3 id="gameName"></h3>
+              </div>
+              <p class="card__text" id="gameText"></p>
+
+              <div class="card__metrics">
+                <div class="metric">
+                  <p data-i18n="factVisits">Visits</p>
+                  <span id="gameVisits">—</span>
+                </div>
+                <div class="metric">
+                  <p data-i18n="factPlaying">Playing now</p>
+                  <span class="metric__live"><i></i><b id="gamePlaying">—</b></span>
+                </div>
+              </div>
+              <div class="card__actions">
+                <a class="btn btn--solid sweep" id="gameLink" target="_blank" rel="noopener"><span id="gameLinkLabel"></span><span class="sweep__shine"></span></a>
+                <a class="btn btn--glass" href="#contato" data-i18n="ctaContact">Get in touch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="trail" id="trail" data-rev></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ MÉTODO ============================ -->
+  <section class="section method" id="metodo">
+    <div data-rev>
+      <h2 class="h2" data-i18n="methodTitle">How I work</h2>
+      <span class="h2__rule" data-rule></span>
+    </div>
+    <p class="prose prose--lead" data-rev data-i18n="methodLead"></p>
+    <ol class="steps" id="steps"></ol>
+  </section>
+
+  <!-- ========================= CHAMADA FINAL ======================== -->
+  <section class="finale" data-rev>
+    <div class="finale__aurora finale__aurora--a" aria-hidden="true"></div>
+    <div class="finale__aurora finale__aurora--b" aria-hidden="true"></div>
+    <div class="finale__inner">
+      <div class="finale__copy">
+        <p class="kicker kicker--dark"><span class="kicker__dash"></span><span data-i18n="footerSlogan">From zero to play.</span></p>
+        <h2 class="finale__title" data-i18n="contactLead"></h2>
+      </div>
+      <div class="finale__side">
+        <div class="finale__gifs">
+          <img class="gif" src="assets/patos.gif" alt="" aria-hidden="true" style="width:clamp(104px,13vw,164px)" />
+          <img class="gif" src="assets/mascote.gif" alt="" aria-hidden="true" style="width:clamp(88px,11vw,132px)" />
+        </div>
+        <a class="pill sweep" href="#contato">
+          <span data-i18n="ctaContact">Get in touch</span>
+          <span class="pill__icon">&#8599;</span>
+          <span class="sweep__shine"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== CONTATO ============================ -->
+  <section class="section contact" id="contato">
+    <div class="contact__head" data-rev>
+      <div>
+        <h2 class="h2" data-i18n="contactTitle">Contact</h2>
+        <span class="h2__rule" data-rule></span>
+      </div>
+      <p class="prose" data-i18n="contactLead"></p>
+    </div>
+    <ul class="contacts" id="contacts"></ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span class="footer__brand">
+    <img class="gif" src="assets/mascote.gif" alt="" aria-hidden="true" style="width:34px" />
+    EoGalvão — Violenszz
+    <img class="gif" src="assets/patos.gif" alt="" aria-hidden="true" style="width:46px" />
+  </span>
+  <span data-i18n="footerSlogan">From zero to play.</span>
+</footer>
+
+<button type="button" class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+</button>
+
+<!-- lightbox da arte do jogo -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" hidden="hidden">
+  <button type="button" class="lightbox__close" id="lightboxClose">
+    <span aria-hidden="true">&#10005;</span><span id="lightboxCloseLabel"></span>
+  </button>
+  <figure class="lightbox__figure">
+    <img id="lightboxImg" alt="" />
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
