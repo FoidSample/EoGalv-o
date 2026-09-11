@@ -116,7 +116,7 @@ export const GAMES = [
 ------------------------------------------------------------------- */
 export const CONTACTS = [
   { label: 'Discord', value: 'eogalvones', copy: true, icon: 'discord' },
-  { labelKey: 'labelEmail', value: 'alefpoletto955@gmail.com', copy: true, icon: 'email' },
+  { labelKey: 'labelEmail', value: 'eogalvao955@gmail.com', copy: true, icon: 'email' },
   { label: 'Roblox', value: 'EoGalvão', href: 'https://www.roblox.com/users/3140316342/profile', icon: 'roblox' },
   { label: 'Twitter', value: '@violenszz', href: 'https://x.com/violenszz', icon: 'x' }
 ];
